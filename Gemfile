@@ -2,11 +2,14 @@ source 'https://rubygems.org'
 
 group :default do
   gem 'rails'
-  gem 'sass-rails'
   gem 'uglifier'
   gem 'coffee-rails'
 
   gem 'active_model_serializers'
+
+  gem 'bootstrap-sass', '~> 3.3.4'
+  gem 'sass-rails', '>= 3.2'
+  gem 'autoprefixer-rails'
 end
 
 group :test, :development do

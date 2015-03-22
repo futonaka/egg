@@ -46,12 +46,18 @@ GEM
       actionpack
       activesupport (>= 3.0.0)
       rspec
+    autoprefixer-rails (5.1.7.1)
+      execjs
+      json
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     bullet (4.14.4)
       activesupport (>= 3.0.0)
@@ -295,8 +301,10 @@ DEPENDENCIES
   active_model_serializers
   annotate
   autodoc
+  autoprefixer-rails
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.4)
   bullet
   captureful_formatter
   coffee-rails
@@ -318,7 +326,7 @@ DEPENDENCIES
   rails_best_practices
   rspec-rails
   rspec-request_describer
-  sass-rails
+  sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   spring
   spring-commands-rspec
