@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to scenarios_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_scenario_path(@scenario), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show scenario</h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @scenario.title %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @scenario.title %></dd>
 
-<%= link_to 'Edit', edit_scenario_path(@scenario) %> |
-<%= link_to 'Back', scenarios_path %>
+</dl>

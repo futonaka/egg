@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_feature_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Feature
+  <% end %>
+  <h1>Listing features</h1>
+</div>
 
-<h1>Listing Features</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @features.each do |feature| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= feature.title %></td>
-        <td><%= feature.description %></td>
-        <td><%= link_to 'Show', feature %></td>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @features) do |feature| %>
+            <td><%= feature.title %></td>
+            <td><%= feature.description %></td>
+            <td><%= link_to 'Show', feature %></td>
         <td><%= link_to 'Edit', edit_feature_path(feature) %></td>
         <td><%= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Feature', new_feature_path %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

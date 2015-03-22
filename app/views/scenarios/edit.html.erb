@@ -1,6 +1,13 @@
-<h1>Editing Scenario</h1>
+<div class="page-header">
+  <%= link_to scenarios_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @scenario, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing scenario</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @scenario %> |
-<%= link_to 'Back', scenarios_path %>

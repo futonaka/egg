@@ -1,27 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_scenario_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Scenario
+  <% end %>
+  <h1>Listing scenarios</h1>
+</div>
 
-<h1>Listing Scenarios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @scenarios.each do |scenario| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= scenario.title %></td>
-        <td><%= link_to 'Show', scenario %></td>
+            <th>Title</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @scenarios) do |scenario| %>
+            <td><%= scenario.title %></td>
+            <td><%= link_to 'Show', scenario %></td>
         <td><%= link_to 'Edit', edit_scenario_path(scenario) %></td>
         <td><%= link_to 'Destroy', scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Scenario', new_scenario_path %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
