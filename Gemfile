@@ -4,6 +4,8 @@ group :default do
   gem 'rails'
   gem 'uglifier'
   gem 'coffee-rails'
+  gem 'jquery-rails'
+  gem 'turbolinks'
 
   gem 'active_model_serializers'
 
