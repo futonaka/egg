@@ -37,6 +37,8 @@ group :development do
 
   gem 'annotate'
   gem 'web-console'
+
+  gem 'bootstrap-generators'
 end
 
 group :test do
