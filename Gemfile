@@ -36,6 +36,7 @@ end
 
 group :test do
   gem 'turnip'
+  gem 'captureful_formatter'
   gem 'poltergeist'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
