@@ -17,11 +17,6 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
 
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-stack_explorer'
-  gem 'pry-byebug'
-
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-spring'
@@ -40,12 +35,19 @@ group :development do
 end
 
 group :test do
+  gem 'turnip'
+  gem 'poltergeist'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_rewinder'
   gem 'rspec-request_describer'
   gem 'autodoc'
   gem 'json_spec'
+
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
 end
 
 group :doc do
