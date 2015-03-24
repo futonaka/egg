@@ -8,4 +8,4 @@ require 'capybara/poltergeist'
 Capybara.default_driver    = :poltergeist
 Capybara.javascript_driver = :poltergeist
 
-Dir.glob("spec/**/*steps.rb") { |f| load f, true }
+Dir.glob("spec/**/*_steps.rb") { |f| load f, true }
