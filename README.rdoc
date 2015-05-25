@@ -1,28 +1,29 @@
-== README
+### clone git repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+git clone git@github.com:futonaka/egg
+cd egg
+```
 
-Things you may want to cover:
+### install phantomjs
 
-* Ruby version
+```
+https://github.com/teampoltergeist/poltergeist#installing-phantomjs
+```
 
-* System dependencies
+### install gems
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+### run the sample feature test
 
-* Database initialization
+```
+budle exec rspec spec/features/
+```
 
-* How to run the test suite
+### test reports
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The test reports will be generated in ./spec/result directory.
+To check the result, please open index.html file on your browser.
