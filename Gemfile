@@ -45,7 +45,8 @@ end
 group :test do
   gem 'turnip'
   gem 'captureful_formatter'
-  gem 'poltergeist'
+  #gem 'poltergeist'
+  gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_rewinder'

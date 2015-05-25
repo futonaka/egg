@@ -3,10 +3,12 @@ require 'turnip'
 require 'turnip/capybara'
 require 'turnip/rspec'
 require 'capybara'
-require 'capybara/poltergeist'
+#require 'capybara/poltergeist'
+require 'selenium-webdriver'
 
-Capybara.default_driver    = :poltergeist
-Capybara.javascript_driver = :poltergeist
+Capybara.default_driver    = :selenium
+#Capybara.default_driver    = :poltergeist
+#Capybara.javascript_driver = :poltergeist
 
 # 複数マッチした場合の動作
 # Ref: https://github.com/willnet/capybara-readme-ja#strategy
