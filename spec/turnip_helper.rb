@@ -8,6 +8,11 @@ require 'capybara/poltergeist'
 Capybara.default_driver    = :poltergeist
 Capybara.javascript_driver = :poltergeist
 
+# 複数マッチした場合の動作
+# Ref: https://github.com/willnet/capybara-readme-ja#strategy
+# エラーとはせず最初の要素を使用する
+Capybara.match = :first
+
 Dir.glob("spec/**/*_steps.rb") { |f| load f, true }
 
 # for CapturefulFormatter
