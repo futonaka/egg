@@ -6,6 +6,7 @@ group :default do
   gem 'coffee-rails'
   gem 'jquery-rails'
   gem 'turbolinks'
+  gem 'therubyracer'
 
   gem 'active_model_serializers'
 
