@@ -14,6 +14,14 @@ step %(:text と表示されていない) do |text|
   expect(page).not_to have_content(text)
 end
 
+step %(ページタイトルに :title と表示されている) do |title|
+  expect(page).to have_title(title)
+end
+
+step %(ページタイトルに :title と表示されていない) do |title|
+  expect(page).not_to have_title(title)
+end
+
 step %(CSVファイルが出力される) do
   expect(page.response_headers['Content-Type']).to eq 'text/csv'
   expect(CSV.parse(page.body)).to be_a(Array)
