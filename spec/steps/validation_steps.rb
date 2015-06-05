@@ -2,6 +2,10 @@ step %(:label ボタンが表示されている) do |label|
   expect(page.find_button(label)).to be_truthy
 end
 
+step %(:label リンクが表示されている) do |label|
+  expect(page.find_link(label)).to be_truthy
+end
+
 step %(:text と表示されている) do |text|
   expect(page).to have_content(text)
 end
