@@ -1,0 +1,10 @@
+firefox:
+  host: 127.0.0.1
+  port: 4445
+ie:
+  host: 127.0.0.1
+  port: 4446
+chrome:
+  host: 127.0.0.1
+  port: 4447
+execute_browser: ie
