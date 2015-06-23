@@ -39,3 +39,6 @@ step %(セレクトボックス :selectbox に :item がある) do |selectbox, i
   expect(page).to have_select(selectbox, with_options: item)
 end
 
+step %(アクセスは :protcol である) do |protcol|
+  expect(page.current_url).to match(/\A#{protcol}:.*\Z/i)
+end
