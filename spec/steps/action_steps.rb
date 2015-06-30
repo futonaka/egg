@@ -43,3 +43,7 @@ end
 step %(:choice のチェックを外す) do |choice|
   uncheck choice
 end
+
+step %(:upload にファイル :file_path を添付する) do |upload, file_path|
+  attach_file(upload, file_path)
+end
